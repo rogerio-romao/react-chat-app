@@ -15,7 +15,7 @@ const Top = () => {
   return (
     <div>
       <div className="d-flex justify-content-between align-items">
-        <h4>
+        <h4 className="text-disappear d-flex align-items-center">
           <Icon
             componentClass={Link}
             to="/"
