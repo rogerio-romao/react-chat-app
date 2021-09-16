@@ -13,7 +13,7 @@ import {
 } from 'rsuite';
 
 import { useModalState } from '../misc/custom-hooks';
-import { database } from '../misc/firebase';
+import { database, auth } from '../misc/firebase';
 
 const model = Schema.Model({
   name: Schema.Types.StringType().isRequired(`Chat name is required`),
@@ -45,6 +45,9 @@ const CreateRoomBtnModal = () => {
     const newRoomData = {
       ...formValue,
       createdAt: firebase.database.ServerValue.TIMESTAMP,
+      admins: {
+        [auth.currentUser.uid]: true,
+      },
     };
 
     try {
