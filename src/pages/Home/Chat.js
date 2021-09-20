@@ -29,12 +29,15 @@ const Chat = () => {
 
   const admins = transformToArray(currentRoom.admins);
   const isAdmin = admins.includes(auth.currentUser.uid);
+  const fcmUsers = transformToArray(currentRoom.fcmUsers);
+  const isReceivingFcm = fcmUsers.includes(auth.currentUser.uid);
 
   const currentRoomData = {
     name,
     description,
     admins,
     isAdmin,
+    isReceivingFcm,
   };
 
   return (
