@@ -1,4 +1,5 @@
 module.exports = {
+  parser: 'babel-eslint',
   root: true,
   env: {
     es6: true,
@@ -7,5 +8,6 @@ module.exports = {
   extends: ['eslint:recommended', 'google'],
   rules: {
     quotes: ['error', 'single'],
+    indent: ['error', 2],
   },
 };

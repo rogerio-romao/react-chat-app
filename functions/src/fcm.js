@@ -1,3 +1,6 @@
+/* eslint-disable arrow-parens */
+/* eslint-disable object-curly-spacing */
+/* eslint-disable require-jsdoc */
 const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 
@@ -5,7 +8,7 @@ const database = admin.database();
 const messaging = admin.messaging();
 
 exports.sendFcm = functions
-  .region('europe-west1')
+  .region('europe-west3')
   .https.onCall(async (data, context) => {
     checkIfAuth(context);
     const { chatId, title, message } = data;
