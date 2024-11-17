@@ -20,7 +20,7 @@
     "timeago-react": "^3.0.3",
     "use-context-selector": "1.1.1",
     "web-vitals": "^0.2.4",
-    "workbox-background-sync": "^5.1.4",
+    "workbox-background-sync": "^7.3.0",
     "workbox-broadcast-update": "^5.1.4",
     "workbox-cacheable-response": "^5.1.4",
     "workbox-core": "^5.1.4",
